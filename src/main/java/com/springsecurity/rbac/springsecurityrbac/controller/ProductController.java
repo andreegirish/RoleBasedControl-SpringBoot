@@ -1,11 +1,14 @@
-# sprig-security-rbac
-Demonstration of role based authentication and authorization using spring security and jwt
+package com.springsecurity.rbac.springsecurityrbac.controller;
 
-### Database
-![RBAC drawio](https://user-images.githubusercontent.com/47694676/183420771-756b6fc3-100f-48e3-8153-1e3f8e53987b.png)
+import com.springsecurity.rbac.springsecurityrbac.entity.Product;
+import com.springsecurity.rbac.springsecurityrbac.service.ProductService;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.web.bind.annotation.*;
 
-### Secured Product API
-```
+import java.util.List;
+
 @RestController
 @RequestMapping("/product")
 public class ProductController {
@@ -48,4 +51,3 @@ public class ProductController {
         return "success";
     }
 }
-```
